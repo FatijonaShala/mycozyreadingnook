@@ -80,7 +80,7 @@ import '../AmbiancePlayer.css';
 const AmbiancePlayer = ({ src, title }) => {
   const [isPlaying, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
-  const sound = new Howl({ src: [src], loop: true, volume });
+  const sound = new Howl({ src: [src], loop: true, volume});
 
   // New state to track volume changes
   const [displayVolume, setDisplayVolume] = useState(volume);
@@ -124,48 +124,6 @@ const AmbiancePlayer = ({ src, title }) => {
         </h3>
       </div>
 
-      {/* Volume control
-      <div className="volume-control">
-      {/* <label> */}
-          {/* <FontAwesomeIcon icon={faVolumeUp} /> Volume icon */}
-        {/* </label> 
-        <Range
-          step={0.01}
-          min={0}
-          max={1}
-          values={[displayVolume]}
-          onChange={(values) => handleVolumeChange(values[0])}
-          renderTrack={({ props, children }) => (
-            <div
-              {...props}
-              style={{
-                ...props.style,
-                height: '3px',
-                width: '200%',
-                background: '#314545',
-              }}
-            >
-              {children}
-            </div>
-          )}
-          renderThumb={({ props }) => (
-            <div
-              {...props}
-              style={{
-                ...props.style,
-                height: '14px',
-                width: '14px',
-                backgroundColor: 'white',
-                borderRadius: '50%',
-                boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.5)',
-              }}
-            />
-          )}
-        />
-      </div>
-    </div> */}
-     {/* Volume control */}
-
      <div className="volume-control">
          <div className="volume-icon"> 
           <FontAwesomeIcon icon={faVolumeUp} /> 
@@ -194,14 +152,7 @@ const AmbiancePlayer = ({ src, title }) => {
             renderThumb={({ props }) => (
               <div
                 {...props} className='react-range-thumb'
-                // style={{
-                //   ...props.style,
-                //   height: '14px',
-                //   width: '14px',
-                //   backgroundColor: '#f6ece2',
-                //   borderRadius: '50%',
-                //   boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.5)',
-                // }}
+               
               />
             )}
           />

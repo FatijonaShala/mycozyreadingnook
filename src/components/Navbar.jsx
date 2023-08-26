@@ -45,7 +45,7 @@ const Navbar = () => {
             dialogClassName="modal-lg"
           >
             <Modal.Header closeButton>
-              <Modal.Title className="cozy-title display-6" style={{marginLeft:'334px'}}>About</Modal.Title>
+              <Modal.Title className="cozy-title display-6" style={{marginLeft: '340PX'}}>About</Modal.Title>
             </Modal.Header>
             <Modal.Body className="custom-modal-body">  
              
