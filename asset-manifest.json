@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mycozyreadingnook/static/css/main.18a723c4.css",
+    "main.js": "/mycozyreadingnook/static/js/main.9223d56f.js",
+    "static/js/787.017b3386.chunk.js": "/mycozyreadingnook/static/js/787.017b3386.chunk.js",
+    "index.html": "/mycozyreadingnook/index.html",
+    "main.18a723c4.css.map": "/mycozyreadingnook/static/css/main.18a723c4.css.map",
+    "main.9223d56f.js.map": "/mycozyreadingnook/static/js/main.9223d56f.js.map",
+    "787.017b3386.chunk.js.map": "/mycozyreadingnook/static/js/787.017b3386.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18a723c4.css",
+    "static/js/main.9223d56f.js"
+  ]
+}
