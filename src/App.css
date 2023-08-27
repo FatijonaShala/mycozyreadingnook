@@ -1,121 +1,121 @@
-                body {
-                    height: 100%;
-                    margin: 0;
-                    padding: 0;
-                }
-                
-                .app-container {
-                    min-height: 100vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: #f6ece2;
-                    color: #314545;
-                }
-                
-                .content-container {
-                    width: 100%;
-                    max-width: 1200px;
-                    margin-top: 0px;
-                }
-                
-                .content-section {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                }
-                
-                img.centered-image {
-                    max-width: 115%;
-                    max-height: 100vh;
-                    margin-right: 0px;
-                }
-                
-                .cozy-font {
-                    font-family: 'Amatic SC', cursive;
-                    font-weight: bolder;
-                }
-                
-                .cozy-title {
-                    font-family: 'Amatic SC', cursive;
-                }
-                
-                .modal-header {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column-reverse;
-                }
-                
-                .lead {
-                    font-family: 'Dosis', sans-serif;
-                    margin: 5px;
-                }
-                
-                .custom-navbar {
-                    background-color: #f6ece2;
-                }
-                
-                .custom-navbar .navbar-brand {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #314545;
-                }
-                
-                .custom-navbar .navbar-nav .nav-item {
-                    margin-left: 10px;
-                    color: #314545;
-                }
-                
-                .custom-navbar .navbar-nav .nav-link {
-                    font-size: 20px;
-                    color: #314545;
-                    font-family: 'Dosis', sans-serif;
-                }
-                
-                .custom-modal-body {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 15px;
-                    margin-right: 10px;
-                }
-                
-                .footer {
-                    background-color: transparent;
-                    color: #314545;
-                    text-align: right;
-                    position: fixed;
-                    bottom: 0;
-                    width: 100%;
-                    font-family: 'Dosis', sans-serif;
-                }
-                /* Base styles for all screen sizes */
-                /* Mobile styles */
-                
-                @media (max-width: 767px) {
-                    .content-section {
-                        padding: 10px;
-                    }
-                    img.centered-image {
-                        max-width: 100%;
-                        height: auto;
-                    }
-                    .custom-navbar .navbar-nav {
-                        flex-direction: column;
-                        align-items: center;
-                    }
-                    .custom-navbar .navbar-nav .nav-item {
-                        margin-left: 0;
-                        margin-bottom: 10px;
-                    }
-                    /* Additional mobile-specific styles */
-                    .custom-navbar .navbar-brand {
-                        font-size: 20px;
-                    }
-                    .custom-navbar .navbar-nav .nav-link {
-                        font-size: 18px;
-                    }
-                }
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6ece2;
+    color: #314545;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 0px;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* margin-right: 40px; */
+}
+
+img.centered-image {
+    max-width: 115%;
+    max-height: 100vh;
+    margin-right: 0px;
+}
+
+.cozy-font {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bolder;
+    /* margin-left: 100px; */
+    /* flex-direction: column; */
+    /* padding-right: 100%; */
+}
+
+.cozy-title {
+    font-family: 'Amatic SC', cursive;
+}
+
+;
+.modal-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.lead {
+    font-family: 'Dosis', sans-serif;
+    margin: 5px;
+}
+
+.custom-navbar {
+    background-color: #f6ece2;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #314545;
+}
+
+.custom-navbar .navbar-nav .nav-item {
+    margin-left: 10px;
+    color: #314545;
+}
+
+.custom-navbar .navbar-nav .nav-link {
+    font-size: 20px;
+    color: #314545;
+    font-family: 'Dosis', sans-serif;
+}
+
+.custom-modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-right: 10px;
+}
+
+
+/* Example styles for the Spotify widget */
+
+.footer {
+    background-color: transparent;
+    color: #314545;
+    text-align: right;
+    /* padding: -1rem; */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Dosis', sans-serif;
+}
+
+@media (max-width: 767px) {
+    .content-section {
+        padding: 10px;
+    }
+    img.centered-image {
+        max-width: 100%;
+        height: auto;
+    }
+    .custom-navbar .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .custom-navbar .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
