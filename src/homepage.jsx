@@ -7,13 +7,10 @@ import Playlist from './components/Playlist';
 function Homepage() {
   return (
     <div className="app-container">
-      {/* <div className="content-container"> */}
         <Row>
           <Col>
               <Playlist/>
           </Col>
-
-
           <Col>
             <section>
               <img
@@ -33,7 +30,6 @@ function Homepage() {
             </section>
           </Col>
         </Row>
-      {/* </div> */}
     </div>
   );
 }
