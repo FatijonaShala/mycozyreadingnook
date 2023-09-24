@@ -1,22 +1,60 @@
+@font-face {
+    font-family: 'Amatic-SC';
+    src: url('../public/fonts/AmaticSC-Regular.woff2') format('woff2'), /* Modern Browsers */
+    url('../public/fonts/AmaticSC-Regular.woff') format('woff');
+    /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../public/fonts/Dosis-Regular.woff') format('woff2'), url('../public/fonts/Dosis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Amatic-SC', sans-serif;
+    /* Use the custom font as a fallback */
+}
+
 body {
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0px;
+    scroll-behavior: smooth;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Amatic SC', cursive;
+}
+
+p {
+    font-family: 'Dosis', sans-serif;
+}
+
+.cozy-title {
+    font-family: 'Amatic SC', cursive;
 }
 
 .app-container {
     min-height: 100vh;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f6ece2;
-    color: #314545;
+    color: #2c3a28;
 }
 
 .content-container {
     width: 100%;
-    max-width: 1200px;
-    margin-top: 0px;
+    max-width: 1400px;
+    margin-top: 70px;
 }
 
 .content-section {
@@ -25,97 +63,395 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
-    /* margin-right: 40px; */
+    text-align: center;
+}
+
+.image-container {
+    width: 120%;
+    height: 120%;
 }
 
 img.centered-image {
-    max-width: 115%;
+    max-width: 100%;
     max-height: 100vh;
-    margin-right: 0px;
+    margin: 0 auto;
 }
 
-.cozy-font {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bolder;
-    /* margin-left: 100px; */
-    /* flex-direction: column; */
-    /* padding-right: 100%; */
+.display-2.smaller-text {
+    font-size: 70px;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
-.cozy-title {
-    font-family: 'Amatic SC', cursive;
+.modal {
+    overflow: hidden;
 }
 
-;
 .modal-header {
     display: flex;
     align-items: center;
     flex-direction: column-reverse;
 }
 
-.lead {
-    font-family: 'Dosis', sans-serif;
-    margin: 5px;
-}
-
 .custom-navbar {
     background-color: #f6ece2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.custom-navbar .navbar-brand {
-    font-size: 24px;
-    font-weight: bold;
-    color: #314545;
+.custom-navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .custom-navbar .navbar-nav .nav-item {
-    margin-left: 10px;
-    color: #314545;
+    margin-left: 20px;
+    color: #2c3a28;
+    margin-right: 20px;
 }
 
 .custom-navbar .navbar-nav .nav-link {
     font-size: 20px;
-    color: #314545;
+    color: #2c3a28;
     font-family: 'Dosis', sans-serif;
 }
 
-.custom-modal-body {
+.modal-content {
+    background: #f6ece2;
+    color: #2c3a28;
+}
+
+.modal-header {
+    background: #e9d0b0;
+    color: #2c3a28;
+}
+
+.modal-body {
+    background: #f6ece2;
+    color: #2c3a28;
+}
+
+.modal-body a {
+    color: #bd5040;
+    text-decoration: none;
+}
+
+body.modal-open {
+    overflow: 0 !important;
+    padding-right: 0 !important;
+}
+
+.iframe {
+    border-radius: 12px;
+    border: none;
+    width: 100%;
+    height: 351px;
+}
+
+.ambiance-player {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    margin-right: 10px;
+    align-items: flex-start;
+    margin: 20px;
 }
 
+.ambiance-header {
+    display: flex;
+    align-items: center;
+}
 
-/* Example styles for the Spotify widget */
-
-.footer {
-    background-color: transparent;
-    color: #314545;
-    text-align: right;
-    /* padding: -1rem; */
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+.ambiance-title {
+    font-size: 18px;
+    margin-right: 20px;
+    margin-bottom: 5px;
     font-family: 'Dosis', sans-serif;
 }
 
-@media (max-width: 767px) {
+.play-pause-icon {
+    /* margin-right: 15px; */
+    font-size: 13px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    /* Add some top margin to separate from the title */
+}
+
+.volume-icon {
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.volume-range {
+    width: 155px;
+    /* Adjust the width of the volume range as needed */
+    margin-left: 5px;
+    /* Add some spacing between the icon and the range */
+}
+
+.react-range-track {
+    background: #2c3a28;
+}
+
+.react-range-thumb {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f6ece2;
+    /* Change this to your preferred background color */
+    color: #2c3a28;
+    text-align: right;
+    overflow: hidden;
+}
+
+
+/* Dark Mode Styles */
+
+.dark-mode body {
+    background-color: #2c3a28;
+    color: #fff;
+}
+
+.dark-mode .app-container {
+    background-color: #2c3a28;
+    color: #eee;
+}
+
+.dark-mode .custom-navbar {
+    background-color: #2c3a28;
+    ;
+}
+
+.dark-mode .custom-navbar .navbar-brand {
+    color: #f6ece2;
+}
+
+.dark-mode .custom-navbar .navbar-nav .nav-item {
+    color: #f6ece2;
+}
+
+.dark-mode .custom-navbar .navbar-nav .nav-link {
+    color: #f6ece2;
+}
+
+.dark-mode .modal-content {
+    background: #565d38;
+    color: #f6ece2;
+}
+
+.dark-mode .modal-header {
+    background: #565d38;
+    color: #f6ece2;
+}
+
+.dark-mode .modal-body {
+    background: #565d38;
+    color: #f6ece2;
+}
+
+.dark-mode .modal-body a {
+    color: #db9b52;
+    text-decoration: none;
+}
+
+.dark-mode .react-range-track {
+    background: #f6ece2;
+}
+
+.dark-mode .react-range-thumb {
+    background-color: white;
+}
+
+.dark-mode .footer {
+    background-color: #2c3a28;
+    color: #f6ece2;
+}
+
+@media (min-width: 768px) and (max-width: 1181px) {
+    /* Adjustments for .content-container */
+    .content-container {
+        margin-top: 0;
+    }
+    /* Adjustments for .content-section */
     .content-section {
-        padding: 10px;
-    }
-    img.centered-image {
-        max-width: 100%;
-        height: auto;
-    }
-    .custom-navbar .navbar-nav {
-        flex-direction: column;
+        margin-top: 0;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
         align-items: center;
     }
-    .custom-navbar .navbar-nav .nav-item {
-        margin-left: 0;
-        margin-bottom: 10px;
+    /* Adjustments for .image-container */
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Adjustments for .centered-image */
+    img.centered-image {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0 auto;
+    }
+    .modal {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Adjustments for .web-brand */
+    .web-brand {
+        width: 100%;
+        margin-left: 30px;
+    }
+    .display-2.smaller-text {
+        font-size: 50px;
+    }
+    /* Adjustments for .playlist */
+    .playlist {
+        max-width: 100%;
+        margin-left: 10px;
+    }
+    /* Adjustments for .playlist .iframe */
+    .playlist .iframe {
+        height: 351px;
+    }
+    .ambiance-player {
+        margin: 40px 10px 0px;
+        /* Added some top margin */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align text and icons to the left */
+    }
+    .ambiance-title {
+        font-size: 16px;
+        text-align: left;
+        margin: 0px;
+        width: 130px;
+        /* Adjust the width as needed */
+        white-space: nowrap;
+        /* Prevent text from wrapping */
+        overflow: hidden;
+        /* Hide overflowed text */
+        text-overflow: ellipsis;
+        /* Display ellipsis (...) for overflowed text */
+    }
+    .play-pause-icon {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    .volume-control {
+        margin-top: 3px;
+        display: flex;
+        flex-direction: row;
+        /* Change to row to align items horizontally */
+        align-items: center;
+        /* Align text and icons vertically */
+    }
+    .volume-icon {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+    .volume-range {
+        width: 90px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1181px) and (orientation: portrait) {
+    .web-brand {
+        width: 100%;
+        margin-left: 30px;
+    }
+    .display-2.cozy-font.smaller-text {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1181px) and (max-height: 1181px) and (orientation: portrait) {}
+
+@media (max-width: 767px) {
+    .navbar-nav .nav-item {
+        margin: -120px 0;
+    }
+    .navbar-toggler-icon {
+        border: none;
+    }
+    .web-brand {
+        width: 100%;
+        margin-left: 20px;
+        margin: 20px;
+    }
+    .display-2.smaller-text {
+        font-size: 40px;
+    }
+    .content-section {
+        padding: 70px;
+        margin-left: -100px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 80px;
+    }
+    .image-container {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .playlist {
+        font-size: 14px;
+        width: 90%;
+        height: 80vh;
+        margin-left: 20px;
+        /* display: flex; */
+        /* flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+    .playlist .iframe {
+        width: 100%;
+        height: 400px;
+    }
+    .footer {
+        overflow: hidden;
+        height: 5vh;
+    }
+    .ambiance-player {
+        margin: 20px 10px 0px;
+        max-width: 290px;
+        /* Added some top margin */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align text and icons to the left */
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        overflow: hidden;
     }
 }

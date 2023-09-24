@@ -4,12 +4,32 @@ import { Howl } from 'howler';
 import { Range } from 'react-range';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause,  faVolumeUp } from '@fortawesome/free-solid-svg-icons';
-import '../AmbiancePlayer.css';
+import { useDarkMode } from '../Context/DarkModeContext';
+
 
 const AmbiancePlayer = ({ src, title }) => {
+  const { darkMode, toggleDarkMode } = useDarkMode();
+  // Function to handle dark mode toggle
+  const handleDarkModeToggle = () => {
+    toggleDarkMode(); // Toggle dark mode state
+
+    // Add or remove the .dark-mode class from the body element
+    if (darkMode) {
+      document.body.classList.remove("dark-mode");
+    } else {
+      document.body.classList.add("dark-mode");
+    }
+
+    // Save the user's preference to local storage
+    localStorage.setItem("darkMode", JSON.stringify(!darkMode));
+  };
+
+
   const [isPlaying, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
   const sound = new Howl({ src: [src], loop: true, volume});
+
+  
 
   // New state to track volume changes
   const [displayVolume, setDisplayVolume] = useState(volume);
@@ -53,6 +73,8 @@ const AmbiancePlayer = ({ src, title }) => {
         </h3>
       </div>
 
+      
+
      <div className="volume-control">
          <div className="volume-icon"> 
           <FontAwesomeIcon icon={faVolumeUp} /> 
@@ -67,20 +89,21 @@ const AmbiancePlayer = ({ src, title }) => {
             renderTrack={({ props, children }) => (
               <div
                 {...props}
-                style={{
-                  ...props.style,
-                 height: '3px',
-                 width: '170%',
-                   background: '#314545',
-                   // marginRight: '10px'
-                 }}
+                 style={{
+                  ...props.style,  
+                  height: '3px',
+                   width: '170%',
+                //      background: '#314545',
+                   
+                  }}   
+                 className={ `react-range-track ${darkMode ? "dark-mode" : ""}`}
               >
                 {children}
               </div>
             )}
             renderThumb={({ props }) => (
               <div
-                {...props} className='react-range-thumb'
+                {...props} className= { `react-range-thumb ${darkMode ? "dark-mode" : ""}`}
                
               />
             )}
