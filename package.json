@@ -19,7 +19,7 @@
         "web-vitals": "^2.1.4"
     },
 
-    "homepage": "https://fatijonashala.github.io/mycozyreadingnook/",
+    "homepage": "https://www.mycozyreadingnook.com/",
 
     "scripts": {
         "predeploy": "npm run build",
