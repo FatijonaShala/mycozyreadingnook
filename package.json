@@ -18,7 +18,9 @@
         "react-scripts": "5.0.1",
         "web-vitals": "^2.1.4"
     },
-    "homepage": "https://www.mycozyreadingnook.com/",
+
+    "homepage": "https://fatijonashala.github.io/mycozyreadingnook/",
+
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -b gh-pages -d build",
