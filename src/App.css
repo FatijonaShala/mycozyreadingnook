@@ -426,10 +426,6 @@ body.modal-open {
         width: 90%;
         height: 80vh;
         margin-left: 20px;
-        /* display: flex; */
-        /* flex-direction: column;
-        justify-content: center;
-        align-items: center; */
     }
     .playlist .iframe {
         width: 100%;
