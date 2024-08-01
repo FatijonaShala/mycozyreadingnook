@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Modal, Button } from "react-bootstrap";
-import { UilMoon } from "@iconscout/react-unicons";
-import { UilSun } from "@iconscout/react-unicons";
+import React, { useState } from "react";
+import { Modal } from "react-bootstrap";
+import { UilMoon, UilSun } from "@iconscout/react-unicons";
 import { useDarkMode } from "../Context/DarkModeContext";
 
-const Navbar = () => {
+const Navbar = ({ changeAmbientSpace }) => {
   const [showAboutModal, setShowAboutModal] = useState(false);
   const { darkMode, toggleDarkMode } = useDarkMode();
 
-
   const handleDarkModeToggle = () => {
-    toggleDarkMode(); 
-  
+    toggleDarkMode();
   };
 
   const handleShowAboutModal = () => {
@@ -21,9 +18,17 @@ const Navbar = () => {
   const handleCloseAboutModal = () => {
     setShowAboutModal(false);
   };
+
   return (
-    <nav className={` custom-navbar  ${darkMode ? "dark-mode" : ""}`}>
-      <ul className="navbar-nav">
+    <nav className={`custom-navbar ${darkMode ? "dark-mode" : ""}`}>
+      {/* <ul className="navbar-nav left-nav">
+        <li className="nav-item">
+          <a className="nav-link" onClick={changeAmbientSpace}>
+            Shuffle Space
+          </a>
+        </li>
+      </ul> */}
+      <ul className="navbar-nav right-nav">
         <li className="nav-item">
           <a className="nav-link" onClick={handleShowAboutModal}>
             About
@@ -36,15 +41,18 @@ const Navbar = () => {
         </li>
       </ul>
 
-      <Modal 
+      <Modal
         show={showAboutModal}
         onHide={handleCloseAboutModal}
-        dialogClassName={`modal-lg ${darkMode ? "dark-mode" : ""}`} >
-       
-        <Modal.Header closeButton className={`custom-modal-header ${darkMode ? "dark-mode" : ""}`}>
+        dialogClassName={`modal-lg ${darkMode ? "dark-mode" : ""}`}
+      >
+        <Modal.Header
+          closeButton
+          className={`custom-modal-header ${darkMode ? "dark-mode" : ""}`}
+        >
           <Modal.Title
             className={`cozy-title display-6 ${darkMode ? "dark-mode " : ""}`}
-            style={{ marginLeft: "0PX" }}
+            style={{ marginLeft: "0px" }}
           >
             About
           </Modal.Title>
@@ -66,12 +74,12 @@ const Navbar = () => {
             comfort of a home library and it's a nod to projects like
             <a href="https://imissmycafe.com/"> IMissMyCafe</a>,
             <a href="http://imissmybar.com/"> IMissMyBar</a>, and
-            <a href="https://imisstheoffice.eu/"> IMissMyOffice</a>.. The sounds
+            <a href="https://imisstheoffice.eu/"> IMissMyOffice</a>. The sounds
             that accompany your reading journey are sourced from{" "}
             <a href="https://www.zapsplat.com/"> ZapSplat</a>, code and
             illustration have been crafted by{" "}
             <a href="https://fatijonashala.github.io/"> Fatijona Shala</a>.
-          </p>{" "}
+          </p>
           <p className="lead">
             So, as you curl up with a good book and let the world outside fade
             away, let My Cozy Reading Nook remind you of the joys of finding
@@ -79,9 +87,7 @@ const Navbar = () => {
             reads...
           </p>
         </Modal.Body>
-        {/* <Modal.Footer></Modal.Footer> */}
       </Modal>
-      
     </nav>
   );
 };

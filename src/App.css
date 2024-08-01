@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Dosis';
-    src: url('../public/fonts/Dosis-Regular.woff') format('woff2'), url('../public/fonts/Dosis-Regular.woff') format('woff');
+    src: url('../public/fonts/Dosis-Regular.woff2') format('woff2'), url('../public/fonts/Dosis-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,9 +17,6 @@
 body {
     font-family: 'Amatic-SC', sans-serif;
     /* Use the custom font as a fallback */
-}
-
-body {
     height: 100%;
     margin: 0;
     padding: 0px;
@@ -49,12 +46,17 @@ p {
     align-items: center;
     background-color: #f6ece2;
     color: #2c3a28;
+    padding: 0 20px;
 }
 
 .content-container {
     width: 100%;
     max-width: 1400px;
     margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .content-section {
@@ -64,17 +66,57 @@ p {
     align-items: center;
     height: 100%;
     text-align: center;
+    flex: 0.3;
+    /* Reduced width for the ambiance player section */
 }
 
 .image-container {
     width: 120%;
-    height: 120%;
+    /* height: 95%; */
+    padding-top: 23px;
+    margin-left: 17px;
+    /* Increased width for the image section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 img.centered-image {
     max-width: 100%;
     max-height: 100vh;
-    margin: 0 auto;
+}
+
+.shuffle-button {
+    position: absolute;
+    top: 100px;
+    left: 54%;
+    transform: translateX(-50%);
+    /* padding: 10px 20px; */
+    color: #4c6346;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.shuffle-button:hover {
+    color: #2c3a28;
+}
+
+.shuffle-button-icon:hover {
+    color: #2c3a28;
+}
+
+.shuffle-button-icon {
+    /* position: absolute; */
+    font-size: 18px;
+    color: black;
+    font-family: 'Dosis', sans-serif;
 }
 
 .display-2.smaller-text {
@@ -174,7 +216,6 @@ body.modal-open {
 }
 
 .play-pause-icon {
-    /* margin-right: 15px; */
     font-size: 13px;
 }
 
@@ -182,7 +223,6 @@ body.modal-open {
     display: flex;
     align-items: center;
     margin-top: 5px;
-    /* Add some top margin to separate from the title */
 }
 
 .volume-icon {
@@ -192,9 +232,7 @@ body.modal-open {
 
 .volume-range {
     width: 155px;
-    /* Adjust the width of the volume range as needed */
     margin-left: 5px;
-    /* Add some spacing between the icon and the range */
 }
 
 .react-range-track {
@@ -215,7 +253,6 @@ body.modal-open {
     left: 0;
     width: 100%;
     background-color: #f6ece2;
-    /* Change this to your preferred background color */
     color: #2c3a28;
     text-align: right;
     overflow: hidden;
@@ -236,7 +273,6 @@ body.modal-open {
 
 .dark-mode .custom-navbar {
     background-color: #2c3a28;
-    ;
 }
 
 .dark-mode .custom-navbar .navbar-brand {
@@ -334,24 +370,18 @@ body.modal-open {
     }
     .ambiance-player {
         margin: 40px 10px 0px;
-        /* Added some top margin */
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        /* Align text and icons to the left */
     }
     .ambiance-title {
         font-size: 16px;
         text-align: left;
         margin: 0px;
         width: 130px;
-        /* Adjust the width as needed */
         white-space: nowrap;
-        /* Prevent text from wrapping */
         overflow: hidden;
-        /* Hide overflowed text */
         text-overflow: ellipsis;
-        /* Display ellipsis (...) for overflowed text */
     }
     .play-pause-icon {
         font-size: 12px;
@@ -359,95 +389,38 @@ body.modal-open {
     }
     .volume-control {
         margin-top: 3px;
-        display: flex;
-        flex-direction: row;
-        /* Change to row to align items horizontally */
-        align-items: center;
-        /* Align text and icons vertically */
-    }
-    .volume-icon {
-        font-size: 12px;
-        margin-right: 5px;
+        width: 150px;
     }
     .volume-range {
-        width: 90px;
+        width: 150px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1181px) and (orientation: portrait) {
-    .web-brand {
-        width: 100%;
-        margin-left: 30px;
+@media (max-width: 768px) {
+    .custom-navbar {
+        padding: 20px;
     }
-    .display-2.cozy-font.smaller-text {
-        font-size: 30px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1181px) and (max-height: 1181px) and (orientation: portrait) {}
-
-@media (max-width: 767px) {
-    .navbar-nav .nav-item {
-        margin: -120px 0;
-    }
-    .navbar-toggler-icon {
-        border: none;
-    }
-    .web-brand {
-        width: 100%;
-        margin-left: 20px;
-        margin: 20px;
-    }
-    .display-2.smaller-text {
-        font-size: 40px;
-    }
-    .content-section {
-        padding: 70px;
-        margin-left: -100px;
-        text-align: center;
+    .navbar-nav {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    }
+    .nav-item {
+        margin: 10px 0;
     }
     .content-container {
-        display: flex;
-        flex-direction: column-reverse;
-        margin-top: 80px;
+        flex-direction: column;
     }
     .image-container {
         width: 100%;
-        height: auto;
-        max-width: 100%;
-        margin: 0 auto;
+        margin-bottom: 20px;
     }
-    .playlist {
-        font-size: 14px;
-        width: 90%;
-        height: 80vh;
-        margin-left: 20px;
-    }
-    .playlist .iframe {
+    .content-section {
         width: 100%;
-        height: 400px;
     }
-    .footer {
-        overflow: hidden;
-        height: 5vh;
+    img.centered-image {
+        max-width: 100%;
     }
-    .ambiance-player {
-        margin: 20px 10px 0px;
-        max-width: 290px;
-        /* Added some top margin */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* Align text and icons to the left */
-    }
-}
-
-@media (min-width: 768px) {
-    body {
-        overflow: hidden;
+    .shuffle-button {
+        width: 150px;
     }
 }
