@@ -17,6 +17,8 @@ const ReadingNook = ({ changeAmbientSpace }) => {
       <div>
         <AmbiancePlayer src="/audio/rain.mp3" title="rainy day" />
         <AmbiancePlayer src="/audio/sunny.mp3" title="sunny day" />
+        <AmbiancePlayer src="/audio/wind.mp3" title="wind" />
+        {/* <AmbiancePlayer src="/audio/street.mp3" title="street ambience" /> */}
         <AmbiancePlayer src="/audio/turning-pages.mp3" title="turning pages" />
         <AmbiancePlayer
           src="/audio/fireplace.mp3"

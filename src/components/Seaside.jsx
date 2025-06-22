@@ -15,14 +15,15 @@ const Seaside = ({ changeAmbientSpace }) => {
         description="Relax and enjoy the ocean waves."
       />
       <div>
-        <AmbiancePlayer src="/audio/waves.mp3" title="ocean waves" />
-        <AmbiancePlayer src="/audio/rain.mp3" title="rainy day" />
-        <AmbiancePlayer src="/audio/sunny.mp3" title="sunny day" />
+        <AmbiancePlayer src="/audio/seawaves.mp3" title="ocean waves" />
         <AmbiancePlayer
-          src="/audio/people-talking.mp3"
-          title="people talking"
+          src="/audio/harbour_seagulls.mp3"
+          title="distant harbour"
         />
-        <AmbiancePlayer src="/audio/wind.mp3" title="espresso machine" />
+        <AmbiancePlayer src="/audio/wind.mp3" title="wind" />
+        <AmbiancePlayer src="/audio/sunny.mp3" title="sunny day" />
+        <AmbiancePlayer src="/audio/rain.mp3" title="rainy day" />
+        <AmbiancePlayer src="/audio/turning-pages.mp3" title="turning pages" />
       </div>
     </Layout>
   );

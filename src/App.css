@@ -44,8 +44,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f6ece2;
-    color: #2c3a28;
+    /* background-color: #f6ece2; */
+    background-color: #FAF3E0;
+    /* color: #2c3a28; */
+    color: #4E4E4E;
+    /* #4E4E4E; */
     padding: 0 20px;
 }
 
@@ -87,13 +90,16 @@ img.centered-image {
     max-height: 100vh;
 }
 
-.shuffle-button {
+
+/* .shuffle-button {
     position: absolute;
     top: 100px;
     left: 54%;
     transform: translateX(-50%);
     /* padding: 10px 20px; */
-    color: #4c6346;
+
+
+/* color: #4c6346;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -114,15 +120,92 @@ img.centered-image {
 
 .shuffle-button-icon {
     /* position: absolute; */
-    font-size: 18px;
+
+
+/* font-size: 18px;
     color: black;
     font-family: 'Dosis', sans-serif;
+} */
+
+.shuffle-button-container {
+    position: absolute;
+    top: 110px;
+    left: 54%;
+    transform: translateX(-50%);
+    z-index: 10;
+    font-family: 'Dosis', sans-serif;
+}
+
+.shuffle-button {
+    color: #D27D56;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.shuffle-button .dropdown-toggle:hover,
+.shuffle-button .dropdown-toggle:focus {
+    color: #2c3a28;
+}
+
+.shuffle-button:hover,
+.shuffle-button:focus {
+    color: #2c3a28;
+}
+
+.shuffle-button-icon {
+    font-size: 18px;
+    color: #2c3a28;
+    font-family: 'Dosis', sans-serif;
+    padding-left: 5px;
+}
+
+.shuffle-button-icon:hover,
+.shuffle-button-icon:focus {
+    color: #2c3a28;
+}
+
+.dropdown-menu {
+    color: #FAF3E0 !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    /* background-color: #f6ece2 !important; */
+}
+
+.dropdown-item {
+    color: #4E4E4E !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: #e9d0b0 !important;
+    color: #4E4E4E !important;
+}
+
+.dropdown-toggle {
+    color: #4c6346;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+    color: #2c3a28;
 }
 
 .display-2.smaller-text {
     font-size: 70px;
     font-weight: 300;
     line-height: 1.2;
+    color: #D27D56;
 }
 
 .modal {
@@ -136,7 +219,7 @@ img.centered-image {
 }
 
 .custom-navbar {
-    background-color: #f6ece2;
+    background-color: #FAF3E0;
     position: absolute;
     top: 0;
     right: 0;
@@ -165,22 +248,27 @@ img.centered-image {
 }
 
 .modal-content {
-    background: #f6ece2;
+    /* background: #f6ece2; */
+    background-color: #e9d0b0;
     color: #2c3a28;
 }
 
 .modal-header {
-    background: #e9d0b0;
-    color: #2c3a28;
+    /* background: #e9d0b0; */
+    background-color: #e8cead;
+    /* color: #4E4E4E; */
+    color: #D27D56;
+    font-weight: bolder;
 }
 
 .modal-body {
-    background: #f6ece2;
-    color: #2c3a28;
+    /* background: #FAF3E0; */
+    background-color: #FAF3E0;
+    color: #4E4E4E;
 }
 
 .modal-body a {
-    color: #bd5040;
+    color: #D27D56;
     text-decoration: none;
 }
 
@@ -200,7 +288,7 @@ body.modal-open {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 20px;
+    margin: 28px;
 }
 
 .ambiance-header {
@@ -222,12 +310,12 @@ body.modal-open {
 .volume-control {
     display: flex;
     align-items: center;
-    margin-top: 5px;
+    margin-top: 13px;
 }
 
 .volume-icon {
     margin-right: 5px;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .volume-range {
@@ -236,15 +324,16 @@ body.modal-open {
 }
 
 .react-range-track {
-    background: #2c3a28;
+    background: #2a2a2a;
 }
 
 .react-range-thumb {
-    height: 13px;
-    width: 13px;
-    background-color: white;
+    height: 12px;
+    width: 12px;
+    /* background-color: white; */
+    background-color: #A3B18A;
     border-radius: 50%;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); */
 }
 
 .footer {
@@ -262,17 +351,21 @@ body.modal-open {
 /* Dark Mode Styles */
 
 .dark-mode body {
-    background-color: #2c3a28;
-    color: #fff;
+    background-color: #3B423A;
+    /* #2b2b28; */
+    /* #2c3a28; */
+    color: #DAD5C3;
 }
 
 .dark-mode .app-container {
-    background-color: #2c3a28;
-    color: #eee;
+    background-color: #3B423A;
+    /* background-color: #2B2B2B; */
+    color: #DAD5C3;
 }
 
 .dark-mode .custom-navbar {
-    background-color: #2c3a28;
+    /* background-color: #2c3a28; */
+    background-color: #3B423A;
 }
 
 .dark-mode .custom-navbar .navbar-brand {
@@ -285,6 +378,14 @@ body.modal-open {
 
 .dark-mode .custom-navbar .navbar-nav .nav-link {
     color: #f6ece2;
+}
+
+.dark-mode .shuffle-button {
+    color: #e9d0b0;
+}
+
+.dark-mode .shuffle-button-icon {
+    color: #e9d0b0;
 }
 
 .dark-mode .modal-content {
@@ -307,17 +408,53 @@ body.modal-open {
     text-decoration: none;
 }
 
+.dark-mode .dropdown-menu {
+    color: #f6ece2 !important;
+    /* Lighter text color for contrast */
+    background-color: #4c6346;
+    /* Darker background to fit the dark mode */
+}
+
+.dark-mode .dropdown-item {
+    color: #f6ece2 !important;
+    background-color: transparent;
+}
+
+.dark-mode .dropdown-menu .dropdown-item:hover,
+.dark-mode .dropdown-menu .dropdown-item:focus {
+    /* background-color: #4c6346 !important; */
+    background-color: rgb(70, 92, 63) !important;
+    /* Slightly lighter background on hover */
+    color: #f6ece2 !important;
+}
+
+.dark-mode .dropdown-toggle {
+    color: #f6ece2 !important;
+}
+
+.dark-mode .dropdown-toggle:hover,
+.dark-mode .dropdown-toggle:focus {
+    color: #dcd0bb;
+    /* Softer color on hover */
+}
+
 .dark-mode .react-range-track {
     background: #f6ece2;
 }
 
 .dark-mode .react-range-thumb {
-    background-color: white;
+    background-color: #e8caab;
+    ;
+    /* background-color: #; */
 }
 
 .dark-mode .footer {
-    background-color: #2c3a28;
+    background-color: #3B423A;
     color: #f6ece2;
+}
+
+.dark-mode .display-2.smaller-text {
+    color: #D4A373;
 }
 
 @media (min-width: 768px) and (max-width: 1181px) {

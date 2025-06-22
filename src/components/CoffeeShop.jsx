@@ -15,17 +15,15 @@ const CoffeeShop = ({ changeAmbientSpace }) => {
         description="Relax and enjoy the coffee shop vibes."
       />
       <div>
-        <AmbiancePlayer src="/audio/coffee-shop.mp3" title="coffee shop" />
+        <AmbiancePlayer src="/audio/people_talking.mp3" title="coffee shop" />
+        <AmbiancePlayer
+          src="/audio/coffee_machine.mp3"
+          title="coffee machine"
+        />
         <AmbiancePlayer src="/audio/rain.mp3" title="rainy day" />
         <AmbiancePlayer src="/audio/sunny.mp3" title="sunny day" />
-        <AmbiancePlayer
-          src="/audio/people-talking.mp3"
-          title="people talking"
-        />
-        <AmbiancePlayer
-          src="/audio/espresso-machine.mp3"
-          title="espresso machine"
-        />
+        <AmbiancePlayer src="/audio/street.mp3" title="street ambience" />
+        <AmbiancePlayer src="/audio/night.mp3" title="night ambience" />
       </div>
     </Layout>
   );

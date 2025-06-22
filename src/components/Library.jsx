@@ -15,6 +15,7 @@ const Library = ({ changeAmbientSpace }) => {
         description="Find a book and let the hours slip by."
       />
       <div>
+        <AmbiancePlayer src="/audio/library.mp3" title="library ambience" />
         <AmbiancePlayer src="/audio/rain.mp3" title="rainy day" />
         <AmbiancePlayer src="/audio/sunny.mp3" title="sunny day" />
         <AmbiancePlayer src="/audio/turning-pages.mp3" title="turning pages" />
